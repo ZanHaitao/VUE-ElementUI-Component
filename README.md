@@ -71,6 +71,7 @@ npm run build // 打包项目
 - ES6
 - Sass
 - ESLint
+- Jest
 
 ## :mega: 目标功能
 
