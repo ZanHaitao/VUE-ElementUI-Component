@@ -1,4 +1,7 @@
-.el-col {
+@import '../mixins/mixins.scss';
+@import '../common/var.scss';
+
+@include b(col){
   float: left;
   box-sizing: border-box;
 }
@@ -21,7 +24,7 @@
     right: $i / 24 * 100%;
   }
 
-  @media only screen and (max-width: 786px - 1) {
+  @include res(xs,$--breakpoints-spec){
     .el-col-xs-#{$i} {
       width: $i / 24 * 100%;
     }
@@ -40,7 +43,7 @@
     }
   }
 
-  @media only screen and (min-width: 786px) and (max-width: 992px - 1) {
+  @include res(sm,$--breakpoints-spec) {
     .el-col-sm-#{$i} {
       width: $i / 24 * 100%;
     }
@@ -59,7 +62,7 @@
     }
   }
 
-  @media only screen and (min-width: 992px) and (max-width: 1200px - 1) {
+  @include res(md,$--breakpoints-spec){
     .el-col-md-#{$i} {
       width: $i / 24 * 100%;
     }
@@ -78,7 +81,7 @@
     }
   }
 
-  @media only screen and (min-width: 1200px) and (max-width: 1920px - 1) {
+  @include res(lg,$--breakpoints-spec) {
     .el-col-lg-#{$i} {
       width: $i / 24 * 100%;
     }
@@ -97,7 +100,7 @@
     }
   }
 
-  @media only screen and (min-width: 1920px) {
+  @include res(xl,$--breakpoints-spec) {
     .el-col-xl-#{$i} {
       width: $i / 24 * 100%;
     }
