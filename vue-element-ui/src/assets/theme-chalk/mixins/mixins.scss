@@ -1,0 +1,37 @@
+@import './config.scss';
+
+/** BEM
+---------------------*/
+
+@mixin b($block) {
+  $selector: $namespace + '-' + $block;
+  @at-root {
+    .#{$selector}{
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier){
+  $selector:&;
+  $currentSelector:'';
+  @each $item in $modifier {
+    $currentSelector: $currentSelector + $selector + $modifier-separator + $item + ',';
+  }
+
+  @at-root {
+    #{$currentSelector}{
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  $selector:&;
+  $currentSelect: $selector + '.' + $state-prefix + $state;
+  @at-root {
+    #{$currentSelect}{
+      @content;
+    }
+  }
+}

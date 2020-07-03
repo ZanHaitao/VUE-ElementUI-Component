@@ -205,15 +205,9 @@
 </template>
 
 <script>
-import ElRow from '@element/ElRow.vue';
-import ElCol from '@element/ElCol.vue';
-
 export default {
   name: 'App',
-  components: {
-    ElRow,
-    ElCol,
-  },
+  components: {},
 };
 </script>
 
